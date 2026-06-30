@@ -1,0 +1,33 @@
+def conversor_moedas():
+    # Exibição do menu de opções
+    print("--- CONVERSOR DE MOEDAS ---")
+    print("1. Dólar")
+    print("2. Euro")
+    print("3. Libra")
+    print("4. Iene")
+    
+    # Leitura da opção do usuário
+    opcao = input("Escolha a moeda de destino (1-4): ")
+    
+    # Verificação se a opção é válida antes de pedir o valor
+    if opcao in ['1', '2', '3', '4']:
+        valor_reais = float(input("Digite o valor em Reais (R$): "))
+        
+        # Processamento da conversão com base na escolha
+        if opcao == '1':
+            resultado = valor_reais * 0.19
+            print(f"R$ {valor_reais:.2f} equivale a $ {resultado:.2f} Dólares.")
+        elif opcao == '2':
+            resultado = valor_reais * 0.17
+            print(f"R$ {valor_reais:.2f} equivale a € {resultado:.2f} Euros.")
+        elif opcao == '3':
+            resultado = valor_reais * 0.15
+            print(f"R$ {valor_reais:.2f} equivale a £ {resultado:.2f} Libras.")
+        elif opcao == '4':
+            resultado = valor_reais * 25.0
+            print(f"R$ {valor_reais:.2f} equivale a ¥ {resultado:.2f} Ienes.")
+    else:
+        print("Opção inválida. Por favor, tente novamente rodando o programa.")
+
+# Executa o programa
+conversor_moedas()
